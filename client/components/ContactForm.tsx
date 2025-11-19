@@ -148,11 +148,11 @@ const ContactForm = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="max-w-2xl mx-auto"
+          className="max-w-2xl mx-auto px-2 sm:px-4"
         >
           {/* Section header */}
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4 tracking-tight">
+          <motion.div variants={itemVariants} className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 sm:mb-4 tracking-tight">
               <span className="gradient-text">Ready to Build Something?</span>
             </h2>
             <p className="text-gray-300 text-lg">
@@ -164,7 +164,7 @@ const ContactForm = () => {
           <motion.form
             variants={itemVariants}
             onSubmit={handleSubmit}
-            className="glass-dark rounded-xl p-8 sm:p-10 space-y-6"
+            className="glass-dark rounded-xl p-4 sm:p-8 md:p-10 space-y-4 sm:space-y-6"
           >
             {/* Success message */}
             {submitStatus === "success" && (
@@ -201,7 +201,7 @@ const ContactForm = () => {
 
             {/* Full Name */}
             <motion.div variants={itemVariants}>
-              <label className="block text-sm font-semibold text-gray-300 mb-2">
+              <label className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">
                 Full Name *
               </label>
               <Input
@@ -217,7 +217,7 @@ const ContactForm = () => {
 
             {/* Email */}
             <motion.div variants={itemVariants}>
-              <label className="block text-sm font-semibold text-gray-300 mb-2">
+              <label className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">
                 Email *
               </label>
               <Input
@@ -233,7 +233,7 @@ const ContactForm = () => {
 
             {/* Main Skill */}
             <motion.div variants={itemVariants}>
-              <label className="block text-sm font-semibold text-gray-300 mb-2">
+              <label className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">
                 Main Skill *
               </label>
               <Select value={formData.mainSkill} onValueChange={handleSkillChange}>
@@ -252,7 +252,7 @@ const ContactForm = () => {
 
             {/* Experience */}
             <motion.div variants={itemVariants}>
-              <label className="block text-sm font-semibold text-gray-300 mb-2">
+              <label className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">
                 Your Experience
               </label>
               <Textarea
@@ -267,7 +267,7 @@ const ContactForm = () => {
 
             {/* Goals */}
             <motion.div variants={itemVariants}>
-              <label className="block text-sm font-semibold text-gray-300 mb-2">
+              <label className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">
                 What do you want to build/achieve?
               </label>
               <Textarea
@@ -285,10 +285,10 @@ const ContactForm = () => {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 hover:opacity-90 text-white font-bold py-3 rounded-lg transition-all duration-300"
+                className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 hover:opacity-90 text-white font-bold py-2.5 sm:py-3 rounded-lg transition-all duration-300 text-sm sm:text-base"
               >
                 {isLoading ? (
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-center gap-2">
                     <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                     Submitting...
                   </div>
