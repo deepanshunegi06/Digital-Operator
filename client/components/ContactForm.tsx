@@ -168,12 +168,19 @@ const ContactForm = () => {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 flex items-center gap-3"
+                className="bg-green-500/20 border border-green-500/50 rounded-lg p-4"
               >
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <p className="text-green-300 font-medium">
-                  Thanks for joining! We'll be in touch soon.
-                </p>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-green-300 font-bold mb-1">
+                      🎉 Welcome to Digital Operators!
+                    </p>
+                    <p className="text-green-200 text-sm">
+                      We'll connect with you via email or Discord soon. Get ready to build something amazing!
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             )}
 
