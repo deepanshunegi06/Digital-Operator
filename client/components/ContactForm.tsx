@@ -77,9 +77,8 @@ const ContactForm = () => {
       const formElement = e.target as HTMLFormElement;
       const formDataToSubmit = new FormData(formElement);
 
-      // Note: Replace with your actual email address for FormSubmit.co
-      // https://formsubmit.co/your-email@example.com
-      const response = await fetch("https://formsubmit.co/ajax/contact@digitaloperators.com", {
+      // FormSubmit.co endpoint with your email
+      const response = await fetch("https://formsubmit.co/ajax/codewithnegi@gmail.com", {
         method: "POST",
         body: formDataToSubmit,
       });
