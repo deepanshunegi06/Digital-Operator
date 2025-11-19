@@ -11,7 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { skills } from "@/data/skills";
-import { useInView } from "react-intersection-observer";
+import { useInView } from "@/hooks/useInView";
 import { CheckCircle, AlertCircle } from "lucide-react";
 
 const ContactForm = () => {
