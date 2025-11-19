@@ -186,7 +186,7 @@ const ContactForm = () => {
                       🎉 Welcome to Digital Operators!
                     </p>
                     <p className="text-green-200 text-sm">
-                      We'll connect with you via email or Discord soon. Get
+                      We'll connect with you via email soon. Get
                       ready to build something amazing!
                     </p>
                   </div>
