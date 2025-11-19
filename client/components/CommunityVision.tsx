@@ -75,7 +75,7 @@ const CommunityVision = () => {
           {/* Main headline */}
           <motion.h2
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight px-2"
           >
             <span className="gradient-text">Shape Something From The Ground Up</span>
           </motion.h2>
@@ -83,7 +83,7 @@ const CommunityVision = () => {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12"
+            className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-12 px-2"
           >
             Even though we're just starting out, this is your chance to be part of something exciting from day one. Help us build the future of Digital Operators and establish the culture, standards, and success stories that will define our community for years to come.
           </motion.p>
@@ -91,7 +91,7 @@ const CommunityVision = () => {
           {/* Key points */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-sm"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm px-2"
           >
             {["Founding Member", "Build Legacy", "Shape Culture"].map(
               (point, idx) => (
