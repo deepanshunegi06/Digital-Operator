@@ -42,12 +42,12 @@ const HeroSection = ({ onCTAClick }: { onCTAClick: () => void }) => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 container px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center"
+        className="relative z-10 container px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center py-12 sm:py-0"
       >
         {/* Main headline */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 tracking-tight"
         >
           <span className="gradient-text block">Digital Operators</span>
         </motion.h1>
@@ -55,7 +55,7 @@ const HeroSection = ({ onCTAClick }: { onCTAClick: () => void }) => {
         {/* Subheadline */}
         <motion.p
           variants={itemVariants}
-          className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-8 leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mb-6 sm:mb-8 leading-relaxed px-2"
         >
           An exclusive community of doers, creatives, and professionals who turn real projects into results
         </motion.p>
@@ -63,13 +63,13 @@ const HeroSection = ({ onCTAClick }: { onCTAClick: () => void }) => {
         {/* Tagline */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-wrap gap-2 sm:gap-3 justify-center mb-12 text-sm sm:text-base"
+          className="flex flex-wrap gap-2 justify-center mb-8 sm:mb-12 text-xs sm:text-sm md:text-base px-2"
         >
           {["Small", "High-Quality", "Active", "Skilled", "Results-Driven"].map(
             (tag, idx) => (
               <span
                 key={idx}
-                className="px-3 sm:px-4 py-1.5 rounded-full glass text-purple-300 font-medium"
+                className="px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full glass text-purple-300 font-medium whitespace-nowrap"
               >
                 {tag}
               </span>
@@ -83,7 +83,7 @@ const HeroSection = ({ onCTAClick }: { onCTAClick: () => void }) => {
           onClick={onCTAClick}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="relative px-8 sm:px-10 py-4 rounded-lg font-bold text-lg bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 overflow-hidden group"
+          className="relative px-6 sm:px-10 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 overflow-hidden group w-full sm:w-auto max-w-sm"
         >
           <span className="relative z-10">Join the Community</span>
           <motion.div
@@ -95,7 +95,7 @@ const HeroSection = ({ onCTAClick }: { onCTAClick: () => void }) => {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 flex flex-col items-center gap-2"
+          className="absolute bottom-4 sm:bottom-8 flex flex-col items-center gap-2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
