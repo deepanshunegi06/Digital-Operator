@@ -48,12 +48,12 @@ const SkillsGrid = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 sm:mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20 px-2"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 sm:mb-4 tracking-tight">
             <span className="gradient-text-blue">Who We're Looking For</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
             We're building a community of exceptional talent across all disciplines
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ const SkillsGrid = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
         >
           {skills.map((skill, idx) => {
             const IconComponent = skill.icon as any;
@@ -73,7 +73,7 @@ const SkillsGrid = () => {
                 key={skill.id}
                 variants={cardVariants}
                 whileHover={{ scale: 1.05, y: -10 }}
-                className="group relative h-48 sm:h-52"
+                className="group relative h-40 sm:h-48 md:h-52"
               >
                 {/* Card background with gradient border effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
@@ -88,13 +88,13 @@ const SkillsGrid = () => {
                     initial={{ scale: 1 }}
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className="relative z-10 mb-4"
+                    className="relative z-10 mb-2 sm:mb-4"
                   >
-                    <IconComponent className="w-12 h-12 text-purple-400 group-hover:text-cyan-300 transition-colors duration-300" />
+                    <IconComponent className="w-10 sm:w-12 h-10 sm:h-12 text-purple-400 group-hover:text-cyan-300 transition-colors duration-300" />
                   </motion.div>
 
                   {/* Skill name */}
-                  <h3 className="relative z-10 text-white font-bold text-lg mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
+                  <h3 className="relative z-10 text-white font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300 line-clamp-2">
                     {skill.name}
                   </h3>
 
