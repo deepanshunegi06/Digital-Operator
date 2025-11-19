@@ -35,7 +35,17 @@ const AppContent = () => {
   );
 };
 
-const rootElement = document.getElementById("root");
-if (rootElement && !rootElement.__reactRootContainer) {
-  createRoot(rootElement).render(<AppContent />);
+// Prevent createRoot from being called multiple times
+if (!window.__reactRootCreated) {
+  window.__reactRootCreated = true;
+  const rootElement = document.getElementById("root");
+  if (rootElement) {
+    createRoot(rootElement).render(<AppContent />);
+  }
+}
+
+declare global {
+  interface Window {
+    __reactRootCreated?: boolean;
+  }
 }
