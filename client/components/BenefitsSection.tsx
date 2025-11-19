@@ -71,9 +71,9 @@ const BenefitsSection = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 sm:mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20 px-2"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 sm:mb-4 tracking-tight">
             <span className="gradient-text">Why Join Digital Operators</span>
           </h2>
         </motion.div>
@@ -83,7 +83,7 @@ const BenefitsSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto px-2"
         >
           {benefits.map((benefit, idx) => {
             const Icon = benefit.icon;
@@ -94,7 +94,7 @@ const BenefitsSection = () => {
                 whileHover={{ y: -5 }}
                 className="group"
               >
-                <div className="relative h-full glass-dark rounded-xl p-8 overflow-hidden group-hover:border-purple-500/50 transition-all duration-300">
+                <div className="relative h-full glass-dark rounded-xl p-5 sm:p-8 overflow-hidden group-hover:border-purple-500/50 transition-all duration-300">
                   {/* Glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -115,12 +115,12 @@ const BenefitsSection = () => {
                     </motion.div>
 
                     {/* Title */}
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3">
                       {benefit.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                       {benefit.description}
                     </p>
                   </div>
