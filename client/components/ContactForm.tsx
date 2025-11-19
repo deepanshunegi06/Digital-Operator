@@ -73,9 +73,13 @@ const ContactForm = () => {
     setIsLoading(true);
 
     try {
-      // Using FormSubmit.co for form submission
-      const formElement = e.target as HTMLFormElement;
-      const formDataToSubmit = new FormData(formElement);
+      // Create FormData with all the form fields
+      const formDataToSubmit = new FormData();
+      formDataToSubmit.append("fullName", formData.fullName);
+      formDataToSubmit.append("email", formData.email);
+      formDataToSubmit.append("mainSkill", formData.mainSkill);
+      formDataToSubmit.append("experience", formData.experience);
+      formDataToSubmit.append("goals", formData.goals);
 
       // FormSubmit.co endpoint with your email
       const response = await fetch("https://formsubmit.co/ajax/codewithnegi@gmail.com", {
