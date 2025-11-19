@@ -39,7 +39,10 @@ const CommunityVision = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-0 w-80 h-80 bg-purple-600/30 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-cyan-600/20 rounded-full mix-blend-screen filter blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <div
+          className="absolute bottom-1/4 right-0 w-80 h-80 bg-cyan-600/20 rounded-full mix-blend-screen filter blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
       </div>
 
       {/* Grid overlay */}
@@ -77,7 +80,9 @@ const CommunityVision = () => {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight px-2"
           >
-            <span className="gradient-text">Shape Something From The Ground Up</span>
+            <span className="gradient-text">
+              Shape Something From The Ground Up
+            </span>
           </motion.h2>
 
           {/* Description */}
@@ -85,7 +90,10 @@ const CommunityVision = () => {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-12 px-2"
           >
-            Even though we're just starting out, this is your chance to be part of something exciting from day one. Help us build the future of Digital Operators and establish the culture, standards, and success stories that will define our community for years to come.
+            Even though we're just starting out, this is your chance to be part
+            of something exciting from day one. Help us build the future of
+            Digital Operators and establish the culture, standards, and success
+            stories that will define our community for years to come.
           </motion.p>
 
           {/* Key points */}
@@ -104,7 +112,7 @@ const CommunityVision = () => {
                     {point}
                   </p>
                 </motion.div>
-              )
+              ),
             )}
           </motion.div>
         </motion.div>

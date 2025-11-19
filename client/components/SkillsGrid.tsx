@@ -54,7 +54,8 @@ const SkillsGrid = () => {
             <span className="gradient-text-blue">Who We're Looking For</span>
           </h2>
           <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
-            We're building a community of exceptional talent across all disciplines
+            We're building a community of exceptional talent across all
+            disciplines
           </p>
         </motion.div>
 

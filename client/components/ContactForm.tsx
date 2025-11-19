@@ -35,7 +35,7 @@ const ContactForm = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -82,10 +82,13 @@ const ContactForm = () => {
       formDataToSubmit.append("goals", formData.goals);
 
       // FormSubmit.co endpoint with your email
-      const response = await fetch("https://formsubmit.co/ajax/codewithnegi@gmail.com", {
-        method: "POST",
-        body: formDataToSubmit,
-      });
+      const response = await fetch(
+        "https://formsubmit.co/ajax/codewithnegi@gmail.com",
+        {
+          method: "POST",
+          body: formDataToSubmit,
+        },
+      );
 
       if (response.ok) {
         setSubmitStatus("success");
@@ -151,7 +154,10 @@ const ContactForm = () => {
           className="max-w-2xl mx-auto px-2 sm:px-4"
         >
           {/* Section header */}
-          <motion.div variants={itemVariants} className="text-center mb-8 sm:mb-12">
+          <motion.div
+            variants={itemVariants}
+            className="text-center mb-8 sm:mb-12"
+          >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 sm:mb-4 tracking-tight">
               <span className="gradient-text">Ready to Build Something?</span>
             </h2>
@@ -180,7 +186,8 @@ const ContactForm = () => {
                       🎉 Welcome to Digital Operators!
                     </p>
                     <p className="text-green-200 text-sm">
-                      We'll connect with you via email or Discord soon. Get ready to build something amazing!
+                      We'll connect with you via email or Discord soon. Get
+                      ready to build something amazing!
                     </p>
                   </div>
                 </div>
@@ -236,7 +243,10 @@ const ContactForm = () => {
               <label className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">
                 Main Skill *
               </label>
-              <Select value={formData.mainSkill} onValueChange={handleSkillChange}>
+              <Select
+                value={formData.mainSkill}
+                onValueChange={handleSkillChange}
+              >
                 <SelectTrigger className="bg-slate-800/50 border-slate-700 text-white">
                   <SelectValue placeholder="Select your main skill" />
                 </SelectTrigger>

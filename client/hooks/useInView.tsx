@@ -22,7 +22,7 @@ export const useInView = (options: UseInViewOptions = {}) => {
       },
       {
         threshold,
-      }
+      },
     );
 
     if (ref.current) {

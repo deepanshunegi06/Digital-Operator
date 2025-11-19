@@ -44,7 +44,8 @@ const Footer = () => {
                 Digital Operators
               </h3>
               <p className="text-gray-400 text-sm">
-                Building an exclusive community of skilled professionals turning ideas into results.
+                Building an exclusive community of skilled professionals turning
+                ideas into results.
               </p>
             </motion.div>
 
@@ -109,16 +110,10 @@ const Footer = () => {
             >
               <p>© {currentYear} Digital Operators. All rights reserved.</p>
               <div className="flex gap-6">
-                <a
-                  href="#"
-                  className="hover:text-purple-400 transition-colors"
-                >
+                <a href="#" className="hover:text-purple-400 transition-colors">
                   Privacy Policy
                 </a>
-                <a
-                  href="#"
-                  className="hover:text-purple-400 transition-colors"
-                >
+                <a href="#" className="hover:text-purple-400 transition-colors">
                   Terms of Service
                 </a>
               </div>

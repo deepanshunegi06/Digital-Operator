@@ -6,7 +6,8 @@ const benefits = [
   {
     icon: Users,
     title: "Work with Skilled Professionals",
-    description: "Collaborate with talented, motivated people from around the world",
+    description:
+      "Collaborate with talented, motivated people from around the world",
   },
   {
     icon: Briefcase,
@@ -99,9 +100,7 @@ const BenefitsSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                   {/* Top border accent on hover */}
-                  <motion.div
-                    className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-300"
-                  />
+                  <motion.div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-300" />
 
                   {/* Content */}
                   <div className="relative z-10">
