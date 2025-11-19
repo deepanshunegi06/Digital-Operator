@@ -92,7 +92,7 @@
 }
 
 html {
-  @apply dark;
+  color-scheme: dark;
 }
 
 @layer base {
