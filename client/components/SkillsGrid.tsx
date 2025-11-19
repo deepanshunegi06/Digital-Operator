@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { skills } from "@/data/skills";
-import { useInView } from "react-intersection-observer";
+import { useInView } from "@/hooks/useInView";
 
 const SkillsGrid = () => {
   const { ref, inView } = useInView({
