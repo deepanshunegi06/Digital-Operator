@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, Briefcase, Zap, Target } from "lucide-react";
-import { useInView } from "react-intersection-observer";
+import { useInView } from "@/hooks/useInView";
 
 const benefits = [
   {
